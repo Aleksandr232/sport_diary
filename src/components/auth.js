@@ -16,7 +16,7 @@ export default function Auth() {
             if(password == '12345'){
                 return setError('не верный пароль')
             }
-            await localStorage.getItem('row@232.ru', '12345')
+            await localStorage.setItem('row@232.ru', '12345')
             setIsAuth(true)
            
         }else{

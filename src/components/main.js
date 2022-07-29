@@ -2,6 +2,7 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useAuth } from '../hooks/useAuth'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -15,6 +16,11 @@ function classNames(...classes) {
 }
 
 export default function Main() {
+    const {isAuth, setIsAuth}= useAuth('')
+  const authHandler=()=>{
+         localStorage.removeItem('token')
+         setIsAuth(false)
+      }
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -95,7 +101,7 @@ export default function Main() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Your Profile
+                            Мой профиль
                           </a>
                         )}
                       </Menu.Item>
@@ -105,17 +111,18 @@ export default function Main() {
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Settings
+                            Настройки
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a
+                            onClick={authHandler}
                             href="#"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Sign out
+                            Выйти
                           </a>
                         )}
                       </Menu.Item>
