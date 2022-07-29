@@ -3,8 +3,28 @@ import { useAuth } from '../hooks/useAuth'
 import { useState } from 'react'
 
 export default function Auth() {
-    const[email, setEmail]=useState('')
-    const[password, setPassword]=useState('')
+    const [email, setEmail]=useState('')
+    const [password, setPassword]=useState('')
+    const {isAuth, setIsAuth}=useAuth('')
+    const [error, setError]=useState('')
+
+    const authHandler=()=>{
+        if(email && password){
+            if(email !== 'row@232.ru'){
+                return setError('не верная почта')
+            }
+            if(password !== '12345'){
+                return setError('не верный пароль')
+            }
+    
+            localStorage.setItem('row@232.ru', '12345')
+            setIsAuth(true)
+            
+        }else{
+            /* setError('Заполните все поля!') */
+            
+        }
+      }
 
   return (
     <>
@@ -27,6 +47,8 @@ export default function Auth() {
                   Email address
                 </label>
                 <input
+                  value={email}
+                  onChange={setEmail}
                   id="email-address"
                   name="email"
                   type="email"
@@ -41,6 +63,8 @@ export default function Auth() {
                   Password
                 </label>
                 <input
+                  value={password}
+                  onChange={setPassword}
                   id="password"
                   name="password"
                   type="password"
@@ -68,6 +92,7 @@ export default function Auth() {
 
             <div>
               <button
+                onClick={authHandler}
                 type="submit"
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
