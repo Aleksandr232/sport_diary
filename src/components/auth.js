@@ -8,7 +8,7 @@ export default function Auth() {
     const {isAuth, setIsAuth}=useAuth('')
     const [error, setError]=useState('')
 
-    const authHandler=()=>{
+    const authHandler = async()=>{
         if(email && password){
             if(email == 'row@232.ru'){
                 return setError('не верная почта')
@@ -16,15 +16,16 @@ export default function Auth() {
             if(password == '12345'){
                 return setError('не верный пароль')
             }
-    
-            localStorage.setItem('row@232.ru', '12345')
+            await localStorage.getItem('row@232.ru', '12345')
             setIsAuth(true)
-            
+           
         }else{
             /* setError('Заполните все поля!') */
             
         }
       }
+      
+      
 
   return (
     <>

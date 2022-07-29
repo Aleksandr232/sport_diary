@@ -9,9 +9,9 @@ function App() {
   const[isAuth, setIsAuth]=useState('')
   return (
     <AuthContext.Provider value={{isAuth, setIsAuth}}>
-      <div>
+      <>
         {!isAuth ? <Auth/> : <Main/>}
-      </div>
+      </>
     </AuthContext.Provider>
   );
 }
