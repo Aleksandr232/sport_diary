@@ -5,10 +5,9 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useAuth } from '../hooks/useAuth'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Рекорды', href: '#', current: true },
+  { name: 'План тренировак', href: '#', current: false },
+  { name: 'Календарь', href: '#', current: false },
 ]
 
 function classNames(...classes) {
