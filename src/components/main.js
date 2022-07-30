@@ -7,7 +7,7 @@ import { useAuth } from '../hooks/useAuth'
 
 
 const navigation = [
-  { name: 'Рекорды', href:'records', current: true },
+  { name: 'Рекорды',  current: true },
   { name: 'План тренировак',  current: false },
   { name: 'Календарь',  current: false },
 ]
