@@ -1,20 +1,21 @@
-import React,{useState} from "react";
-import Auth from "./components/auth";
-import Main from "./components/main";
-import { AuthContext}  from "./authContext";
+import React from "react";
 import {Route, Routes, BrowserRouter} from 'react-router-dom'
-
+import Records from "./pages/records";
+import Calender from "./pages/calender";
+import PlanTrener from "./pages/planTrener";
 
 
 
 
 function App() {
-  const[isAuth, setIsAuth]=useState('')
+  
   return (
     <BrowserRouter>
-      <AuthContext.Provider value={{isAuth, setIsAuth}}>
-      {!isAuth ? <Auth/> : <Main/>}
-    </AuthContext.Provider>
+    <Routes>
+        <Route path="/" element={<Records/>}/>
+        <Route path="/plan/calender" element={<Calender/>}/>
+        <Route path="/plan" element={<PlanTrener/>}/>
+    </Routes>
  </BrowserRouter>
     
   );

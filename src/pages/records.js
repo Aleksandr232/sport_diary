@@ -1,12 +1,12 @@
 import React from "react";
-import Main from "../components/main";
+import Main from '../components/main'
 
 
-
-export default function Calender(){
+export default function Records(){
     return(
         <div>
             <Main/>
         </div>
     )
 }
+

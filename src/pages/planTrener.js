@@ -1,9 +1,11 @@
 import React from "react";
-
+import Main from "../components/main";
 
 
 export default function PlanTrener(){
     return(
-        <div>5g5</div>
+        <div>
+            <Main/>
+        </div>
     )
 }

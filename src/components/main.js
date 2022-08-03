@@ -3,13 +3,14 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useAuth } from '../hooks/useAuth'
-
+import {Link} from 'react-router-dom'
+ 
 
 
 const navigation = [
-  { name: 'Рекорды',  current: true },
-  { name: 'План тренировак',  current: false },
-  { name: 'Календарь',  current: false },
+  { name: 'Рекорды', href: '/' , current: true },
+  { name: 'План тренировак', href:"/plan",  current: false },
+  { name: 'Календарь', href:'calender',  current: false },
 ]
 
 function classNames(...classes) {
@@ -43,9 +44,9 @@ export default function Main() {
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
@@ -53,7 +54,7 @@ export default function Main() {
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
