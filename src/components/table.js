@@ -2,30 +2,43 @@ import React,{useState} from "react";
 
 
 export default function Tables(){
+    const [data, setData] = useState('')
     return(
         <table className="table-fixed m-auto mt-20  ">
   <thead>
     <tr>
-      <th>Song</th>
-      <th>Artist</th>
-      <th>Year</th>
+      <th>Возраст</th>
+      <th>Масса</th>
+      <th>Имя</th>
+      <th>Страна</th>
+      <th>Время</th>
+      <th>Сезон</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
     </tr>
     <tr>
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
+      <td>r</td>
+      <td>r</td>
+      <td>r</td>
+      <td>r</td>
+      <td>r</td>
+      <td>r</td>
     </tr>
     <tr>
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
+      <td>t</td>
+      <td>g</td>
+      <td>g</td>
+      <td>g</td>
+      <td>g</td>
+      <td>g</td>
     </tr>
   </tbody>
 </table>
