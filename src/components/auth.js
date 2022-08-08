@@ -1,12 +1,15 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { useAuth } from '../hooks/useAuth'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Auth() {
     const [email, setEmail]=useState('')
     const [password, setPassword]=useState('')
     const {isAuth, setIsAuth}=useAuth('')
     const [error, setError]=useState('')
+    const navigate = useNavigate()
+
 
     const authHandler = async()=>{
         if(email && password){
@@ -18,6 +21,7 @@ export default function Auth() {
             }
             await localStorage.setItem('row@232.ru', '12345')
             setIsAuth(true)
+            navigate('/account')
            
         }else{
             /* setError('Заполните все поля!') */

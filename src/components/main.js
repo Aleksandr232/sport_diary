@@ -75,7 +75,7 @@ export default function Main() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://sun9-16.userapi.com/s/v1/ig2/Fc3NnSEDRS-YxdK94C4VeK4O9xeireOiObnKBLATfNQLGv5FRIkIOXc_2EDTBHZyS3f3ldJef4tCPqVyTThdAlOS.jpg?size=2560x1707&quality=96&type=album"
+                        src="https://st2.depositphotos.com/2495409/7855/i/450/depositphotos_78555574-stock-photo-question-mark.jpg"
                         alt=""
                       />
                     </Menu.Button>
@@ -90,7 +90,7 @@ export default function Main() {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
+                      {/* <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
@@ -109,7 +109,7 @@ export default function Main() {
                             Настройки
                           </a>
                         )}
-                      </Menu.Item>
+                      </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
                           <Link
