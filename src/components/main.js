@@ -112,13 +112,13 @@ export default function Main() {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <Link
                             onClick={authHandler}
-                            href="#"
+                            to="/auth"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Выйти
-                          </a>
+                            Войти
+                          </Link>
                         )}
                       </Menu.Item>
                     </Menu.Items>

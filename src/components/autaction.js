@@ -1,14 +1,14 @@
 import React,{useState} from "react";
 import Auth from "./components/auth";
-import Main from "./components/main";
 import { AuthContext}  from "./authContext";
+import Account from "../pages/account";
 
 
 export default function Autaction(){
     const[isAuth, setIsAuth]=useState('')
     return(
     <AuthContext.Provider value={{isAuth, setIsAuth}}>
-      {!isAuth ? <Auth/> : <Main/>}
+      {!isAuth ? <Auth/> : <Account/>}
     </AuthContext.Provider>
     )
 }
