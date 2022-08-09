@@ -29,6 +29,9 @@ export default function Auth() {
         }
       }
       
+      const Back =()=>{
+        navigate('/')
+      }
       
 
   return (
@@ -92,6 +95,13 @@ export default function Auth() {
                   <LockClosedIcon className="h-5 w-5 text-black group-hover:text-indigo-400" aria-hidden="true" />
                 </span>
                Войти
+              </button>
+              <button
+                onClick={Back}
+                type="submit"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+               Назад
               </button>
             </div>
           </div>
