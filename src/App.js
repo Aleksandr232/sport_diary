@@ -5,7 +5,7 @@ import Calender from "./pages/calender";
 import PlanTrener from "./pages/planTrener";
 import Auth from "./components/auth";
 import Account from "./pages/account";
-
+import MyProfile from "./pages/myprofile";
 
 
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="/plan" element={<PlanTrener/>}/>
         <Route path="/auth" element={<Auth/>}/>
         <Route path="/account" element={<Account/>}/>
+        <Route path="/myprofile" element={<MyProfile/>}/>
     </Routes>
  </BrowserRouter>
     

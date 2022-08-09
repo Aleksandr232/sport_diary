@@ -74,12 +74,12 @@ export default function MainAccount() {
                     <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/myprofile"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Мой профиль
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>
