@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
 import {DATA} from "./data";
 
 
@@ -10,7 +12,7 @@ export default function Tables(){
     return(
      <>
      <button onClick={()=>setOpen(prev=>!prev)} className="py-2 px-4 border m-20 ml-[45%] bg-blue-400 ">{open ? "Скрыть" : "Показать"}</button>
-        {open && <table  className="table-fixed m-auto mt-20 w-[700px]">
+        {open && <Table  >
     <thead>
         <tr>
         <th>Возраст</th>
@@ -31,7 +33,7 @@ export default function Tables(){
         <td>{row.seson}</td>
         </tr>))}
     </tbody>
-    </table>}
+    </Table>}
         </>
     )
 }
