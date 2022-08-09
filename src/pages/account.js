@@ -1,7 +1,9 @@
-
+import MainAccount from "../components/main_account"
 
 export default function Account(){
     return(
-        <div>sf</div>
+        <div>
+            <MainAccount/>
+        </div>
     )
 }
