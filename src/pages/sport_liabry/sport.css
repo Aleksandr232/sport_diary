@@ -42,6 +42,9 @@ input, button, textarea {
 
 }
 
+.pen{
+  width: 20px;
+}
 .input::placeholder {
   color: var(--secondary);
 }

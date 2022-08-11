@@ -2,7 +2,7 @@
 
 import logo from './images/logo.svg'
 import grid from "./images/grid_icon.png"
-import pen from "./images/pen_icon.svg" 
+import pen from "./images/pen.jpg" 
 import './sport.css'
 
 
@@ -29,7 +29,7 @@ export default function Header({ onNavigate }) {
           <span>Список</span>
         </a>
         <a href="#" className="btn" onClick={() => onNavigate(false)}>
-          <img src={pen} alt="" />
+          <img className='pen' src={pen} alt="" />
           <span>Запись</span>
         </a>
       </nav>
