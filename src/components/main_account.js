@@ -84,12 +84,12 @@ export default function MainAccount() {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
-                            href="#"
+                          <Link
+                            to="/liabry"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Настройки
-                          </a>
+                            Дневник
+                          </Link>
                         )}
                       </Menu.Item>
                       <Menu.Item>

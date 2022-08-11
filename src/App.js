@@ -6,6 +6,7 @@ import PlanTrener from "./pages/planTrener";
 import Auth from "./components/auth";
 import Account from "./pages/account";
 import MyProfile from "./pages/myprofile";
+import SportLiabry from "./pages/sport_liabry/SportLiabry";
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/auth" element={<Auth/>}/>
         <Route path="/account" element={<Account/>}/>
         <Route path="/myprofile" element={<MyProfile/>}/>
+        <Route path="/liabry" element={<SportLiabry/>}/>
     </Routes>
  </BrowserRouter>
     
