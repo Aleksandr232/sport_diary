@@ -1,5 +1,7 @@
+/* eslint-disable no-undef */
 import React,{useState, useEffect} from "react"
-import { MOODS, API_KEY } from "./data"
+import { MOODS, API_KEY  } from "./data"
+import { v4 as uuidv4 } from 'uuid';
 
 import search from './images/search_icon.svg'
 
@@ -15,8 +17,9 @@ export default function AddNote({ addNote }) {
     const form = new FormData(e.target)
     const data = Object.fromEntries(form)
     
-    /* data.id = id */
-    data.image = selectedImage.src.large 
+   
+    data.id = uuidv4()
+    data.image = selectedImage.src.large || './images/note_img.png'
 
     console.log(data)
     addNote(data)
@@ -81,7 +84,7 @@ export default function AddNote({ addNote }) {
           className="input add-form__textarea" 
           placeholder="Описание"
         ></textarea>
-        <button className="btn add-form__btn">
+        <button  className="btn add-form__btn">
           <img src="" alt="" />
           <span>Создать</span>
         </button>

@@ -1,6 +1,6 @@
 
 
-import logo from './images/logo.svg'
+import rowing from './images/rowing.jpg'
 import grid from "./images/grid_icon.png"
 import pen from "./images/pen.jpg" 
 import './sport.css'
@@ -10,7 +10,7 @@ export default function Header({ onNavigate }) {
   return (
     <header className="header">
       <div className="logo">
-        <img className="logo__img" src={logo} />
+        <img className="logo__img" src={rowing} />
         <h1 className="logo__title">Дневник</h1>
       </div>
       <div className="filter">
