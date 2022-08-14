@@ -3,26 +3,24 @@ import Main from "../components/main";
 
 
 export default function PlanTrener(){
-    const [plan, setPlan] = useState([]);
-    const [loading, setLoading] = useState(true);
-  
-    async function fetchUrl() {
-      const response = await fetch('http://localhost:3001/api/contacts', plan);
-      const json = await response.json();
-      console.log(json)
-      setPlan(json);
-      setLoading(false);
-    }
-  
+    const [plan, setPlan] = useState(null);
+    
     useEffect(() => {
-      fetchUrl();
+        fetch('/api/plans')
+        .then(response=>response.json())
+        .then(response => setPlan(response.data))
+        console.log(plan)
     }, []);
     
   
     return(
         <>
             <Main/>
-            <h1>{plan?.name}</h1>
+            <h1>Дата:{plan?.datas}</h1>
+            <h1>Тренировка утро:{plan?.moring}</h1>
+            <h1>Тренировка вечер:{plan?.evening}</h1>
+            <h1>Пульсовые зоны:{plan?.pulse}</h1>
+            <img src={plan?.exercise.image} alt="" />
         </>
     )
 }
