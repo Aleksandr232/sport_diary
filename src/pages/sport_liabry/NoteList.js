@@ -14,7 +14,7 @@ export default function NoteList({ notes }) {
             <article className="full-note">
               <header className="full-note__header">
                 <h2 className="full-note__title"><strong>😌</strong> Побывал в горах</h2>
-                <time className="full-note__date" dateTime="2021-08-21">21 августа 2021 года</time>
+                <time className="full-note__date" dateTime="2022-08-21">21 августа 2021 года</time>
                 <button className="modal__btn">
                   <img src="./images/close_icon.svg" alt="close modal" />
                 </button>
