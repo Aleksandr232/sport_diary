@@ -10,7 +10,6 @@ export default function PlanTrener(){
         fetch('/api/plans')
         .then(response=>response.json())
         .then(response => setPlan(response.data))
-        console.log(plan)
     }, []);
     
   
