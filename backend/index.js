@@ -18,6 +18,7 @@ app.get('/api/plans/', (req, res) => {
     exercise:{
       image: 'https://fitseven.ru/wp-content/uploads/2019/10/kak-pravilno-delat-planku.jpg'
     }
+  
   }})
 })
 

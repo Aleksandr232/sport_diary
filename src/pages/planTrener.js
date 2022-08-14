@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from "react";
 import Main from "../components/main";
 
+import './plan.css'
 
 export default function PlanTrener(){
     const [plan, setPlan] = useState(null);
@@ -16,11 +17,29 @@ export default function PlanTrener(){
     return(
         <>
             <Main/>
-            <h1>Дата:{plan?.datas}</h1>
-            <h1>Тренировка утро:{plan?.moring}</h1>
-            <h1>Тренировка вечер:{plan?.evening}</h1>
-            <h1>Пульсовые зоны:{plan?.pulse}</h1>
-            <img src={plan?.exercise.image} alt="" />
+        <div className="container">
+            <div className="grid_plan">
+                <div className="box">
+                    <h1>Дата:{plan?.datas}</h1>
+                </div>
+                <div className="box"> 
+                    <h1>Тренировка утро:{plan?.moring}</h1>
+                </div>
+                <div className="box">
+                    <h1>Тренировка вечер:{plan?.evening}</h1>
+                </div>
+                <div className="box">
+                    <h1>Пульсовые зоны:{plan?.pulse}</h1>
+                </div>
+                <div className="box">
+                    <img src={plan?.exercise.image} alt="" />
+                </div>
+            </div>
+        </div>
+            
+            
+            
+            
         </>
     )
 }

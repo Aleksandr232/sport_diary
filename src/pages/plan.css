@@ -1,0 +1,16 @@
+.grid_plan{
+    display: grid;
+    grid-template-columns: repeat(3,359px)
+}
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.container{
+    margin: 0 auto;
+    width: 1140px;
+}
