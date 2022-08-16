@@ -19,16 +19,16 @@ export default function PlanTrener(){
         <div className="container">
             <div className="grid_plan">
                 <div className="box">
-                    <h1>Дата:{plan?.datas}</h1>
+                    <h1 className="text">Дата:<div className="data">{plan?.datas}</div></h1>
                 </div>
                 <div className="box"> 
-                    <h1>Тренировка утро:{plan?.moring}</h1>
+                    <h1 className="text">Тренировка утро:<div className="data">{plan?.moring}</div></h1>
                 </div>
                 <div className="box">
-                    <h1>Тренировка вечер:{plan?.evening}</h1>
+                    <h1 className="text">Тренировка вечер:<div className="data">{plan?.evening}</div></h1>
                 </div>
                 <div className="box">
-                    <h1>Пульсовые зоны:{plan?.pulse}</h1>
+                    <h1 className="text">Пульсовые зоны:<div className="data">{plan?.pulse}</div></h1>
                 </div>
                 <div className="box">
                     <img src={plan?.exercise.image} alt="" />
