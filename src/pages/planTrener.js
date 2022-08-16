@@ -7,7 +7,7 @@ export default function PlanTrener(){
     const [plan, setPlan] = useState(null);
     
     useEffect(() => {
-        fetch('http://localhost:3000/api/plans')
+        fetch('http://localhost:3001/api/plans')
         .then(response=>response.json())
         .then(response => setPlan(response.data))
     }, []);
