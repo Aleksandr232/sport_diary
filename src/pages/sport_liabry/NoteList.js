@@ -8,8 +8,8 @@ export default function NoteList({ notes }) {
 
   return (
     <>
-      {modal
-        ? (
+      {modal ?
+        (
           <main className="modal">
             <article className="full-note">
               <header className="full-note__header">
