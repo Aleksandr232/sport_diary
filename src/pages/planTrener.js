@@ -1,4 +1,6 @@
 import React,{useState, useEffect} from "react";
+import ReactPlayer from 'react-player/youtube'
+
 import Main from "../components/main";
 
 import './plan.css'
@@ -31,7 +33,10 @@ export default function PlanTrener(){
                     <h1 className="text">Пульсовые зоны:<div className="data">{plan?.pulse}</div></h1>
                 </div>
                 <div className="box">
-                    <img src={plan?.exercise.image} alt="" />
+                    <ReactPlayer
+                     width='100%'
+                     height='100%'
+                     url={plan?.exercise.url} />
                 </div>
             </div>
         </div>

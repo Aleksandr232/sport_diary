@@ -16,7 +16,7 @@ app.get('/api/plans/', (req, res) => {
     evening: '2 часа аэроба',
     pulse:'утро: 170-190чсс, вечер: 130чсс',
     exercise:{
-      image: 'https://fitseven.ru/wp-content/uploads/2019/10/kak-pravilno-delat-planku.jpg'
+      url: 'https://www.youtube.com/watch?v=JwstsZveJ7I'
     }
   
   }})
